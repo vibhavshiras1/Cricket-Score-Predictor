@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>IPL Score Predictor</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='css/style2.css')}}" type="text/css">
+    </head>
+    <body bgcolor="#d2a679">
+        <img src="/static/ipl.png" height="50px" width="50px" class="logo">
+        <h1 class="heading1">T20 Score Predictor</h1>
+        <div class="form_content">
+        <form action="{{url_for('predict_score')}}" method="POST">
+            <label for="batting_team"><b>Batting Team :</b></label>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <select name="batting_team" id="batting" required="required">
+                <option value="select">--Select a team--</option>
+                <option value=1>Royal Challengers Bangalore</option>
+                <option value=2>Chennai Super Kings</option>
+                <option value=3>Delhi Capitals</option>
+                <option value=4>Mumbai Indians</option>
+                <option value=5>Kings XI Punjab</option>
+                <option value=6>Sunrisers Hyderabad</option>
+                <option value=7>Rajasthan Royals</option>
+                <option value=8>Kolkata Knight Riders</option>
+            </select><br><br>
+            <label for="bowling_team"><b>Bowling Team :</b></label>
+            &nbsp;&nbsp;
+            <select name="bowling_team" id="bowling" required="required">
+                <option value="select">--Select a team--</option>
+                <option value=1>Royal Challengers Bangalore</option>
+                <option value=2>Chennai Super Kings</option>
+                <option value=3>Delhi Capitals</option>
+                <option value=4>Mumbai Indians</option>
+                <option value=5>Kings XI Punjab</option>
+                <option value=6>Sunrisers Hyderabad</option>
+                <option value=7>Rajasthan Royals</option>
+                <option value=8>Kolkata Knight Riders</option>
+            </select><br><br>
+            <b>Score :</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="score" id="box_style" value="{{request.form['score']}}" required="required" autocomplete="off" style="border-radius: 5px;"><br><br>
+            <b>Wickets : </b>&nbsp;&nbsp;<input type="text" name="wickets" id="box_style" value="{{request.form['wickets']}}" required="required" autocomplete="off" style="border-radius: 5px;"><br><br>
+            <b>Overs : </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="overs" id="box_style" value="{{request.form['overs']}}" required="required" autocomplete="off" style="border-radius: 5px;"><br><br>
+            <button type="submit" class="button10">Predict Score</button>
+        </form>
+        </div>
+        <p class="output_content">{{output_text}}</p>
+    </body>
+</html>

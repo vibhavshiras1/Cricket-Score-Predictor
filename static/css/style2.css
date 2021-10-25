@@ -1,0 +1,55 @@
+.heading1{
+    color: darkblue;
+    text-align: center;
+    font-size: 35px;
+}
+
+.logo{
+    position: absolute;
+    left: 560px;
+}
+
+.form_content{
+    position: absolute;
+    top: 125px;
+    left: 500px;
+    font-size: 30px;
+    color: #000066;
+    font-family: serif;
+}
+
+select{
+    height: 30px;
+    width: 300px;
+    font-size: 18px;
+    background-color: #000066;
+    color: white;
+    border-radius: 10px;
+}
+
+#box_style{
+    color: white;
+    background-color: #000066;
+    width: 200px;
+    height: 20px;
+    font-size: 18px;
+}
+
+.button10{
+    position: absolute;
+    left: 225px;
+    font-size: 17px;
+    padding: 10px;
+    background-color: #000099;
+    color: white;
+    border-radius: 8px;
+}
+
+.output_content{
+    position: absolute;
+    top: 540px;
+    left: 650px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #2e5cb8;
+}
